@@ -2,6 +2,7 @@
 My configurations for arch linux
 
 ## i3blocks
+![i3blocks](https://github.com/kgrewal2/ArchConfigurations/blob/master/1591427861.png)
 - Audio
 - Bluetooth
 - Wifi
@@ -21,6 +22,7 @@ My configurations for arch linux
 - maim
 - i3lock
 - Font: Roboto Sans
+
 #### Configuration
 - Mod key <kbd>Windows</kbd>
 - Lock Screen <kbd>Ctrl</kbd>+<kbd>Mod</kbd>+<kbd>L</kbd>
