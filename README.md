@@ -11,6 +11,7 @@ My configurations for arch linux
 - Time/Date
 
 ## i3status
+![i3status](https://github.com/kgrewal2/ArchConfigurations/blob/master/1591431255.png)
 - Cpu usage
 - Memory
 - Volume
