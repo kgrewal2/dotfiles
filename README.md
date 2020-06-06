@@ -1,4 +1,5 @@
-# ArchConfigurations
+![ArchLinux](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/375px-Arch_Linux_logo.svg.png)
+
 My configurations for arch linux
 
 ## i3blocks
