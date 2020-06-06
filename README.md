@@ -7,3 +7,12 @@ My configurations for arch linux
 - Wifi
 - Battery
 - Time/Date
+
+## i3status
+- Cpu usage
+- Memory
+- Volume
+- Wireless
+- Battery
+- Time
+
