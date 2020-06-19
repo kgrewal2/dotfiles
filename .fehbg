@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-center '/home/itachi/Pictures/Wallpapers/jobs.jpg' 
