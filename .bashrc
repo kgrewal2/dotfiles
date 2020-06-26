@@ -1,8 +1,6 @@
 #--------------------
 # Basic Setup
 #--------------------
-# Username and Dir Information
-export PS1="\e[38;5;112m\w \e[0m: \[$(tput sgr0)\]"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -11,15 +9,25 @@ export PS1="\e[38;5;112m\w \e[0m: \[$(tput sgr0)\]"
 #--------------------
 alias ls='ls --color=auto'
 alias ..='cd ..'
-alias mysuspend='systemctl suspend'
-
+alias calendar='calcurse'
+alias diskusage='ncdu'
+alias sc='maim -s ./Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
 #--------------------
 # Functions
 #--------------------
 function mkcdir()
 {
-	mkdir "$1" &&
-	cd "$1"
+    mkdir "$1" &&
+    cd "$1"
+}
+
+function search()
+{
+    if [$1 -eq '']; then
+        firefox --search "$(xclip -o)"; exit
+    else
+        firefox --search "$*"; exit
+    fi
 }
 
 # Find a file with a pattern in name:
@@ -27,10 +35,10 @@ function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 
 # Find a file with pattern $1 in name and Execute $2 on it:
 function fe() { find . -type f -iname '*'"${1:-}"'*' \
--exec ${2:-file} {} \;  ; }
+    -exec ${2:-file} {} \;  ; }
 
 # Handy Extract Program
-function extract()      
+function extract()
 {
     if [ -f $1 ] ; then
         case $1 in
@@ -55,7 +63,7 @@ function extract()
 function btconnect()
 {
     bluetoothctl power on;
-    bluetoothctl devices | grep $1 | awk '{split($0,a," "); print a[2]}' | xargs bluetoothctl connect  
+    bluetoothctl devices | grep $1 | awk '{split($0,a," "); print a[2]}' | xargs bluetoothctl connect
 }
 
 function btoff()
