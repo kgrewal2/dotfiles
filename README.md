@@ -30,3 +30,9 @@ My configurations for arch linux
     - ([Gruvbox Theme](https://github.com/morhetz/gruvbox/tree/master/colors))
 - Screenshots
     - maim
+    
+### dwmbar
+- Includes
+    - Battery
+    - Date
+    - Time
