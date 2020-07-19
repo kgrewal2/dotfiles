@@ -2,6 +2,8 @@
 
 My configurations for arch linux
 
+<img src="https://img.shields.io/badge/License-MIT-007aff"/>
+
 ## Softwares
 - Launcher
     - dmenu
