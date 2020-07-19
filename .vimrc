@@ -181,32 +181,32 @@ function! CompleteAbbrev(findstart, base)
 endfunction
 
 " Git
-iabbrev gitandroid :robot:
-iabbrev gitbug :bug:
-iabbrev gitcomments :bulb:
-iabbrev gitdb :card_file_box:
-iabbrev gitdocs :pencil:
-iabbrev gitfeatures :sparkles:
-iabbrev gitfilechange :truck:
-iabbrev gitfix :ambulance:
-iabbrev gitformat :art:
-iabbrev gitinitial :tada:
-iabbrev gitios :green_apple:
-iabbrev gitlinux :penguin:
-iabbrev gitmacos :apple:
-iabbrev gitmerge :twisted_rightwards_arrows:
-iabbrev gitrefactor :recycle:
-iabbrev gitremove :fire:
-iabbrev gitrevert :rewind:
-iabbrev gitreview :ok_hand:
-iabbrev gitsecurity :lock:
-iabbrev gitperformance :zap:
-iabbrev gittests :white_check_mark:
-iabbrev gitui :lipstick:
-iabbrev gitupdate :package:
-iabbrev gitwindows :checkered_flag:
-iabbrev gitworking :construction:
+iabbrev gandroid :robot:
+iabbrev gbug :bug:
+iabbrev gcomments :bulb:
+iabbrev gdb :card_file_box:
+iabbrev gdocs :pencil:
+iabbrev gfeatures :sparkles:
+iabbrev gfilechange :truck:
+iabbrev gfix :ambulance:
+iabbrev gformat :art:
+iabbrev ginitial :tada:
+iabbrev gios :green_apple:
+iabbrev glinux :penguin:
+iabbrev gmacos :apple:
+iabbrev gmerge :twisted_rightwards_arrows:
+iabbrev grefactor :recycle:
+iabbrev gremove :fire:
+iabbrev grevert :rewind:
+iabbrev greview :ok_hand:
+iabbrev gsecurity :lock:
+iabbrev gperformance :zap:
+iabbrev gtests :white_check_mark:
+iabbrev gui :lipstick:
+iabbrev gupdate :package:
+iabbrev gwindows :checkered_flag:
+iabbrev gworking :construction:
 
 " Other
-iabbrev vimname Karandeep Singh Grewal
-iabbrev vimmail karandeep.grewal97@gmail.com
+iabbrev myname Karandeep Singh Grewal
+iabbrev mymail karandeep.grewal97@gmail.com
