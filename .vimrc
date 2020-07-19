@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+filetype indent on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -7,14 +8,16 @@ Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'preservim/nerdtree'
 Plugin 'preservim/nerdcommenter'
+Plugin 'udalov/kotlin-vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'qpkorr/vim-renamer'
 call vundle#end()
 
 " Emmet only for HTML/CSS
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,eruby EmmetInstall
 let g:user_emmet_leader_key='<C-Z>'
 
 "--------------------
@@ -40,30 +43,28 @@ vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 "--------------------
 " Normal Mode
 "--------------------
+nnoremap <leader>/ :tabnew<CR>:FZF<CR>
+
 " Stop search highlighting
 nnoremap <leader><space> :noh<CR>
 
 " Replace
 nnoremap S :%s/\<<C-r><C-w>\>/
 
-" TABS SETTINGS----------
-" New Tab
-nnoremap <leader>t :tabnew<space>
-" Close Tab
-nnoremap <leader>w :wq<CR>
 " Next Tab
-nnoremap <leader><tab> gt
-
-" SPLIT SHORTCUTS
-nnoremap <leader>v :Vexplore<cr>
-nnoremap <leader>h :Hexplore<cr>
+nnoremap <C-w> gt
+nnoremap <C-q> gT
 
 " NAVIGATION----------
-nnoremap <PageDown> 8<C-e>
-nnoremap <PageUp>   8<C-y>
+nnoremap <PageDown> 1<C-e>
+nnoremap <PageUp>   1<C-y>
 
 nnoremap <C-j> mz:m+<cr>`z
 nnoremap <C-k> mz:m-2<cr>`z
+
+" TOGGLE PASTE MODE
+set pastetoggle=<F2>
+
 "--------------------
 " Insert Mode
 "--------------------
@@ -103,7 +104,7 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set foldmethod=indent
+set foldmethod=manual
 
 " Search Options
 set incsearch

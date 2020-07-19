@@ -7,27 +7,28 @@
 #--------------------
 # Aliases
 #--------------------
-alias ls='ls --color=auto'
 alias ..='cd ..'
-alias calendar='calcurse'
-alias diskusage='ncdu'
+alias lock='slock'
+alias ls='ls -hN --color=auto --group-directories-first'
 alias sc='maim -s ./Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
+alias sus='systemctl suspend'
+alias grep='grep --color=auto'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
+alias update='sudo pacman -Sy'
+alias upgrade='sudo pacman -Syu'
+alias offscreen='xrandr --output eDP-1 --off'
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+alias yt='youtube-dl -i'
+alias yta='youtube-dl -w -x --audio-format mp3 --audio-quality 0 -i -o "%(title)s.%(ext)s"'
+
 #--------------------
 # Functions
 #--------------------
-function mkcdir()
+function mkcd()
 {
     mkdir "$1" &&
     cd "$1"
-}
-
-function search()
-{
-    if [$1 -eq '']; then
-        firefox --search "$(xclip -o)"; exit
-    else
-        firefox --search "$*"; exit
-    fi
 }
 
 # Find a file with a pattern in name:
@@ -76,3 +77,14 @@ function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 
 # Create a ZIP archive of a file or folder.
 function makezip() { zip -r "${1%%/}.zip" "$1" ; }
+
+export PATH=$PATH:/home/itachi/.gem/ruby/2.7.0/bin
+export PATH=$PATH:/home/itachi/.local/bin/
+
+# SOURCE FZF
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/itachi/.sdkman"
+[[ -s "/home/itachi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/itachi/.sdkman/bin/sdkman-init.sh"

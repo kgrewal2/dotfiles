@@ -5,7 +5,7 @@ printBattery(){
     if [[ $capacity -le 10 ]]; then
         dunstify --urgency=critical "Low Battery"
     fi
-    if [[ $capacity -ge 90 ]]; then
+    if [[ $capacity -eq 90 ]]; then
         dunstify --urgency=critical "Battery Full"
     fi
     echo "$capacity%"

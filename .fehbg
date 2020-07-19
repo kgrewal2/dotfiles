@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-center '/home/itachi/Pictures/Wallpapers/jobs.jpg' 
+feh --no-fehbg --bg-scale '/home/itachi/Pictures/Wallpapers/wallpaper.jpg' 
