@@ -36,3 +36,6 @@ My configurations for arch linux
     - Battery
     - Date
     - Time
+    
+
+
