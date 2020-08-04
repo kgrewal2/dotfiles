@@ -12,9 +12,9 @@ My configurations for arch linux
 - Notifications
     - dunst
 - Terminal
-    - st
+    - terminator
 - File Browsers
-    - Ranger
+    - ranger
     - mc
 - Image Viewer
     - feh
