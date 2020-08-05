@@ -21,20 +21,20 @@ My configurations for arch linux
 | Display Server       | Xorg            | [Xorg](https://wiki.archlinux.org/index.php/Xorg)                     |
 
 ## Vim Plugins
-| Plugin                                                                  | Description                             |
-| ---                                                                     | ---                                     |
-| [VundleVim/Vundle.vim  ](https://www.github.com/VundleVim/Vundle.vim  ) | Plugin Manager                          |
-| [airblade/vim-gitgutter](https://www.github.com/airblade/vim-gitgutter) | Git Signs for Changed Lines             |
-| [itchyny/lightline.vim ](https://www.github.com/itchyny/lightline.vim ) | Configurable Status Bar                 |
-| [jiangmiao/auto-pairs  ](https://www.github.com/jiangmiao/auto-pairs  ) | Insert/Delete brackets, parens & quotes |
-| [mattn/emmet-vim       ](https://www.github.com/mattn/emmet-vim       ) | Essential Toolkit for Web Development   |
-| [qpkorr/vim-renamer    ](https://www.github.com/qpkorr/vim-renamer    ) | Bulk File Renaming                      |
-| [scrooloose/syntastic  ](https://www.github.com/scrooloose/syntastic  ) | Syntax Checking                         |
-| [tpope/vim-commentary  ](https://www.github.com/tpope/vim-commentary  ) | Comments Plugin                         |
-| [tpope/vim-surround    ](https://www.github.com/tpope/vim-surround    ) | Surrounding Plugin                      |
-| [godlygeek/tabular     ](https://www.github.com/godlygeek/tabular     ) | Tabularizing Plugin                     |
-| [ycm-core/YouCompleteMe](https://www.github.com/ycm-core/YouCompleteMe) | Code Completion Plugin                  |
-| [ github/morhetz](https://github.com/morhetz/gruvbox)                   | Gruvbox (Theme)                         |
+| Plugin                                                            | Description                             |
+| ---                                                               | ---                                     |
+| [Vundle.vim     ] (https://www.github.com/VundleVim/Vundle.vim  ) | Plugin Manager                          |
+| [vim-gitgutter  ] (https://www.github.com/airblade/vim-gitgutter) | Git Signs for Changed Lines             |
+| [lightline.vim  ] (https://www.github.com/itchyny/lightline.vim ) | Configurable Status Bar                 |
+| [auto-pairs     ] (https://www.github.com/jiangmiao/auto-pairs  ) | Insert/Delete brackets, parens & quotes |
+| [emmet-vim      ] (https://www.github.com/mattn/emmet-vim       ) | Essential Toolkit for Web Development   |
+| [vim-renamer    ] (https://www.github.com/qpkorr/vim-renamer    ) | Bulk File Renaming                      |
+| [syntastic      ] (https://www.github.com/scrooloose/syntastic  ) | Syntax Checking                         |
+| [vim-commentary ] (https://www.github.com/tpope/vim-commentary  ) | Comments Plugin                         |
+| [vim-surround   ] (https://www.github.com/tpope/vim-surround    ) | Surrounding Plugin                      |
+| [tabular        ] (https://www.github.com/godlygeek/tabular     ) | Tabularizing Plugin                     |
+| [YouCompleteMe  ] (https://www.github.com/ycm-core/YouCompleteMe) | Code Completion Plugin                  |
+| [morhetz        ] (https://github.com/morhetz/gruvbox)            | Gruvbox (Theme)                         |
 
     
 ### dwmbar
