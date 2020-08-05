@@ -4,6 +4,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export PS1="\[\033[33;1m\]\w\[\033[m\]\$ "
+motivate
+
 #--------------------
 # Aliases
 #--------------------
@@ -19,8 +22,11 @@ alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
 alias offscreen='xrandr --output eDP-1 --off'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+alias vimm='vim $(fzf)'
 alias yt='youtube-dl -i'
+alias cd-='cd -'
 alias yta='youtube-dl -w -x --audio-format mp3 --audio-quality 0 -i -o "%(title)s.%(ext)s"'
+alias colorp='xcalib -d :0 -b 1 /usr/share/color/icc/colord/hp_probook\ 5330m_user.icm'
 
 #--------------------
 # Functions

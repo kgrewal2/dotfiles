@@ -1,18 +1,20 @@
+set encoding=utf-8
 set nocompatible
 filetype off
 filetype indent on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
-Plugin 'preservim/nerdtree'
 Plugin 'preservim/nerdcommenter'
-Plugin 'udalov/kotlin-vim'
-Plugin 'ycm-core/YouCompleteMe'
 Plugin 'qpkorr/vim-renamer'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
 
 " Emmet only for HTML/CSS
@@ -128,6 +130,9 @@ set novisualbell
 
 " Theme
 colorscheme gruvbox
+let g:gruvbox_contrast_dark="hard"
+
+" Other Basic Settings
 set background=dark
 set clipboard+=unnamed
 set cmdheight=1
@@ -154,7 +159,6 @@ set smartcase
 set smartindent
 set noshowmode
 set smarttab
-" set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 set undodir=~/.vim/undodir
 set undofile
 set wildmenu
