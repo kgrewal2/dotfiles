@@ -1,5 +1,4 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 exec dunst &
-./.dwmbar.sh &
-exec xiccd &
+./.config/dwmbar.sh &
 exec dwm
