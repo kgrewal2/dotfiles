@@ -1,4 +1,4 @@
-SEP=" | "
+SEP="  |  "
 
 printBattery(){
     capacity=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -8,11 +8,11 @@ printBattery(){
     if [[ $capacity -eq 90 ]]; then
         dunstify --urgency=critical "Battery Full"
     fi
-    echo "$capacity%"
+    echo "$capacity%"
 }
 
 printDate(){
-    printf "$(date "+%A %d %h $SEP %I:%M %p")"
+    printf "$(date "+%A, %h %d $SEP %I:%M %p")"
 }
 
 while :; do
