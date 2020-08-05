@@ -38,10 +38,10 @@ My configurations for arch linux
 
     
 ### dwmbar
-- Includes
-    - Battery
-    - Date
-    - Time
+Includes:
+- Battery
+- Date
+- Time
     
 
 
