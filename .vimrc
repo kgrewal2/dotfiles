@@ -9,11 +9,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
-Plugin 'preservim/nerdcommenter'
 Plugin 'qpkorr/vim-renamer'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
 Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
 
