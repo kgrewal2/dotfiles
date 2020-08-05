@@ -23,11 +23,11 @@ My configurations for arch linux
 ## Vim Plugins
 | Plugin                                                            | Description                             |
 | ---                                                               | ---                                     |
-| [Vundle.vim     ](https://www.github.com/VundleVim/Vundle.vim  ) | Plugin Manager                          |
+| [Vundle         ](https://www.github.com/VundleVim/Vundle.vim  ) | Plugin Manager                          |
 | [vim-gitgutter  ](https://www.github.com/airblade/vim-gitgutter) | Git Signs for Changed Lines             |
-| [lightline.vim  ](https://www.github.com/itchyny/lightline.vim ) | Configurable Status Bar                 |
+| [lightline      ](https://www.github.com/itchyny/lightline.vim ) | Configurable Status Bar                 |
 | [auto-pairs     ](https://www.github.com/jiangmiao/auto-pairs  ) | Insert/Delete brackets, parens & quotes |
-| [emmet-vim      ](https://www.github.com/mattn/emmet-vim       ) | Essential Toolkit for Web Development   |
+| [emmet          ](https://www.github.com/mattn/emmet-vim       ) | Essential Toolkit for Web Development   |
 | [vim-renamer    ](https://www.github.com/qpkorr/vim-renamer    ) | Bulk File Renaming                      |
 | [syntastic      ](https://www.github.com/scrooloose/syntastic  ) | Syntax Checking                         |
 | [vim-commentary ](https://www.github.com/tpope/vim-commentary  ) | Comments Plugin                         |
