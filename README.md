@@ -30,6 +30,8 @@ My configurations for arch linux
     - ([Gruvbox Theme](https://github.com/morhetz/gruvbox/tree/master/colors))
 - Screenshots
     - maim
+- Color Profile
+    - HP Probook 5330M ([TTF Central](https://www.tftcentral.co.uk))
     
 ### dwmbar
 - Includes
