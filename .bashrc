@@ -5,6 +5,7 @@
 [[ $- != *i* ]] && return
 
 export PS1="\[\033[33;1m\]\w\[\033[m\]\$ "
+export EDITOR=vim
 motivate
 
 #--------------------
@@ -18,6 +19,7 @@ alias sus='systemctl suspend'
 alias grep='grep --color=auto'
 alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
+alias dbps='sudo -iu postgres'
 alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
 alias offscreen='xrandr --output eDP-1 --off'
