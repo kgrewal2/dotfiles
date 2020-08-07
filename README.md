@@ -35,8 +35,12 @@ My configurations for arch linux
 | [tabular        ](https://www.github.com/godlygeek/tabular     ) | Tabularizing Plugin                     |
 | [YouCompleteMe  ](https://www.github.com/ycm-core/YouCompleteMe) | Code Completion Plugin                  |
 | [morhetz        ](https://github.com/morhetz/gruvbox)            | Gruvbox (Theme)                         |
+| [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat) | Vim-Autoformat                       |
 
-    
+### Format Programs for Vim-Autoformat:
+- autopep8
+
+--- 
 ### dwmbar
 Includes:
 - Battery
