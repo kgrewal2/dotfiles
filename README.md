@@ -1,6 +1,6 @@
 ![ArchLinux](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/375px-Arch_Linux_logo.svg.png)
 
-My configurations for arch linux
+My configurations for Arch Linux (Rather a backup)
 
 <img src="https://img.shields.io/badge/License-MIT-007aff"/>
 
@@ -46,6 +46,82 @@ Includes:
 - Battery
 - Date
 - Time
-    
+
+---
+
+### My Packages
+
+Arch Linux
+- base
+- bash-completion
+- efibootmgr
+- fzf
+- git
+- grub
+- htop
+- intel-ucode
+- linux-firmware
+- linux-lts
+- man-db, man-pages
+- neofetch
+- networkmanager
+- openssh
+- snapd
+- terminator
+- tree
+- vim
+- xcalib
+- xclip
+- xdg-users-dir
+- yarn
+- youtube-dl
+
+Apps
+- dmenu
+- dunst
+- firefox
+- maim
+- mc
+- ranger
+- redshift
+- vlc
+- zoom
+
+Audio
+- alsa-firmware
+- alsa-utils
+- pavucontrol
+- python-pyalsa
+- pulseaudio-bluetooth
+
+Bluetooth
+- bluez-hid2hci
+- bluez-utils
+
+Devel
+- cmake
+- gedit
+- npm
+- postgresql
+
+Fonts
+- noto-fonts-emoji
+- ttf-iosevka
+- ttf-joypixels
+- ttf-linux-libertine
+- ttf-linux-libertine-g
+- ttf-roboto
+
+Formatter
+- astyle
+- yapf
+
+Xorg
+- xorg-server
+- xorg-xinit
+- xorg-xinput
+- xorg-xsetroot
 
 
+
+ 
