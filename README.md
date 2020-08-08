@@ -1,6 +1,6 @@
 ![ArchLinux](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/375px-Arch_Linux_logo.svg.png)
 
-My configurations for Arch Linux (Rather a backup)
+My configuration for Arch Linux (Rather a backup)
 
 <img src="https://img.shields.io/badge/License-MIT-007aff"/>
 
