@@ -50,78 +50,13 @@ Includes:
 ---
 
 ### My Packages
-
-Arch Linux
-- base
-- bash-completion
-- efibootmgr
-- fzf
-- git
-- grub
-- htop
-- intel-ucode
-- linux-firmware
-- linux-lts
-- man-db, man-pages
-- neofetch
-- networkmanager
-- openssh
-- snapd
-- terminator
-- tree
-- vim
-- xcalib
-- xclip
-- xdg-users-dir
-- yarn
-- youtube-dl
-
-Apps
-- dmenu
-- dunst
-- firefox
-- maim
-- mc
-- ranger
-- redshift
-- vlc
-- zoom
-
-Audio
-- alsa-firmware
-- alsa-utils
-- pavucontrol
-- python-pyalsa
-- pulseaudio-bluetooth
-
-Bluetooth
-- bluez-hid2hci
-- bluez-utils
-
-Devel
-- cmake
-- gedit
-- npm
-- postgresql
-
-Fonts
-- noto-fonts-emoji
-- ttf-iosevka
-- ttf-joypixels
-- ttf-linux-libertine
-- ttf-linux-libertine-g
-- ttf-roboto
-
-Formatter
-- astyle
-- yapf
-
-Xorg
-- xorg-server
-- xorg-xinit
-- xorg-xinput
-- xorg-xsetroot
-
-
-
- 
+| Category    | Packages                                                                                                                                                                                                                            |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Arch Linux  | base, bash-completion, dwm<sup>git.suckless</sup>, efibootmgr, fzf, git, grub, htop, intel-ucode, linux-firmware, linux-lts, man-db, man-pages, neofetch, networkmanager, openssh, snapd<sup>AUR</sup>, terminator, tree, vim, xcalib, xclip, xdg-users-dir, yarn, youtube-dl |
+| Apps        | dmenu, dunst, firefox, maim, mc, ranger, redshift, vlc, zoom                                                                                                                                                                        |
+| Audio       | alsa-firmware, alsa-utils, pavucontrol, python-pyalsa                                                                                                                                                                               |
+| Bluetooth   | bluez-hid2hci, bluez-utils, pulseaudio-bluetooth                                                                                                                                                                                    |
+| Development | cmake, gedit, npm, postgresql                                                                                                                                                                                                       |
+| Fonts       | noto-fonts-emoji, ttf-iosevka<sup>AUR</sup>, ttf-joypixels, ttf-linux-libertine, ttf-linux-libertine-g, ttf-roboto                                                                                                                                |
+| Formatter   | astyle, yapf                                                                                                                                                                                                                        |
+| Xorg        | xorg-server, xorg-xinit, xorg-xinput, xorg-xsetroot, xiccd<sup>AUR</sup>                                                                                                                                                                 |
