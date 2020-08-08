@@ -37,9 +37,6 @@ My configurations for Arch Linux (Rather a backup)
 | [morhetz        ](https://github.com/morhetz/gruvbox)            | Gruvbox (Theme)                         |
 | [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat) | Vim-Autoformat                       |
 
-### Format Programs for Vim-Autoformat:
-- autopep8
-
 --- 
 ### dwmbar
 Includes:
