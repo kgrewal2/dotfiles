@@ -1,6 +1,6 @@
 ![ArchLinux](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/375px-Arch_Linux_logo.svg.png)
 
-My configurations for arch linux
+My configuration for Arch Linux (Rather a backup)
 
 <img src="https://img.shields.io/badge/License-MIT-007aff"/>
 
@@ -35,13 +35,25 @@ My configurations for arch linux
 | [tabular        ](https://www.github.com/godlygeek/tabular     ) | Tabularizing Plugin                     |
 | [YouCompleteMe  ](https://www.github.com/ycm-core/YouCompleteMe) | Code Completion Plugin                  |
 | [morhetz        ](https://github.com/morhetz/gruvbox)            | Gruvbox (Theme)                         |
+| [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat) | Vim-Autoformat                       |
 
-    
+--- 
 ### dwmbar
 Includes:
 - Battery
 - Date
 - Time
-    
 
+---
 
+### My Packages
+| Category    | Packages                                                                                                                                                                                                                            |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Arch Linux  | base, bash-completion, dwm<sup>git.suckless</sup>, efibootmgr, fzf, git, grub, htop, intel-ucode, linux-firmware, linux-lts, man-db, man-pages, neofetch, networkmanager, openssh, snapd<sup>AUR</sup>, terminator, tree, vim, xcalib, xclip, xdg-users-dir, yarn, youtube-dl |
+| Apps        | dmenu, dunst, firefox, maim, mc, ranger, redshift, vlc, zoom                                                                                                                                                                        |
+| Audio       | alsa-firmware, alsa-utils, pavucontrol, python-pyalsa                                                                                                                                                                               |
+| Bluetooth   | bluez-hid2hci, bluez-utils, pulseaudio-bluetooth                                                                                                                                                                                    |
+| Development | cmake, gedit, npm, postgresql                                                                                                                                                                                                       |
+| Fonts       | noto-fonts-emoji, ttf-iosevka<sup>AUR</sup>, ttf-joypixels, ttf-linux-libertine, ttf-linux-libertine-g, ttf-roboto                                                                                                                                |
+| Formatter   | astyle, yapf                                                                                                                                                                                                                        |
+| Xorg        | xorg-server, xorg-xinit, xorg-xinput, xorg-xsetroot, xiccd<sup>AUR</sup>                                                                                                                                                                 |
