@@ -8,6 +8,9 @@ export PS1="\[\033[33;1m\]\w\[\033[m\]\$ "
 export EDITOR=vim
 motivate
 
+export HISTCONTROL=ignoreboth:erasedups
+
+
 #--------------------
 # Aliases
 #--------------------
@@ -15,36 +18,69 @@ alias ..='cd ..'
 alias lock='slock'
 alias ls='ls -hN --color=auto --group-directories-first'
 alias sc='maim -s ./Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
-alias sus='systemctl suspend'
 alias grep='grep --color=auto'
 alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
 alias dbps='sudo -iu postgres'
 alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
+alias list-installed='comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)'
 alias offscreen='xrandr --output eDP-1 --off'
+alias lowscreen='xrandr --output eDP-1 --gamma 0.7:0.7:0.7 --brightness 0.6'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias vimm='vim $(fzf)'
 alias yt='youtube-dl -i'
 alias cd-='cd -'
-alias yta='youtube-dl -w -x --audio-format mp3 --audio-quality 0 -i -o "%(title)s.%(ext)s"'
+alias ytaudio='youtube-dl -v -ic -o "~/Music/%(uploader)s/%(playlist)s/%(playlist_index)s- %(title)s.%(ext)s" --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0'
 alias colorp='xcalib -d :0 -b 1 /usr/share/color/icc/colord/hp_probook\ 5330m_user.icm'
+alias shut='cat /sys/class/power_supply/BAT0/status && shutdown'
+alias sus='cat /sys/class/power_supply/BAT0/status && systemctl suspend'
 
+#--------------------
+# Cool Console Functions
+#--------------------
+# Text as a URL
+function cc-sharetext()
+{
+    echo $* | curl -F 'f:1=<-' ix.io;
+}
+# Gamma Brightness
+function cc-display()
+{
+    xrandr --output $1 --gamma $2:$2:$2 --brightness $3
+}
+# Tiny URL
+function cc-urlshorten()
+{
+    curl -s tinyurl.com/api-create.php?url=$1
+}
+
+# Link for a file
+function cc-sharefile()
+{
+    curl -F file=@$1 https://ttm.sh
+}
+
+# Dictionary
+function cc-lookup()
+{
+    curl 'dict.org/d:'+$1 | less
+}
+
+# Find a file with a pattern in name:
+function cc-find() { find . -type f -iname '*'"$*"'*' -ls ; }
+
+# Find a file with pattern $1 in name and Execute $2 on it:
+function cc-execute() { find . -type f -iname '*'"${1:-}"'*' \
+    -exec ${2:-file} {} \;  ; }
 #--------------------
 # Functions
 #--------------------
 function mkcd()
 {
     mkdir "$1" &&
-    cd "$1"
-}
-
-# Find a file with a pattern in name:
-function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
-
-# Find a file with pattern $1 in name and Execute $2 on it:
-function fe() { find . -type f -iname '*'"${1:-}"'*' \
-    -exec ${2:-file} {} \;  ; }
+        cd "$1"
+    }
 
 # Handy Extract Program
 function extract()

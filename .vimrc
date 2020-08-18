@@ -9,8 +9,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
+Plugin 'preservim/nerdtree'
+Plugin 'mileszs/ack.vim'
 Plugin 'qpkorr/vim-renamer'
 Plugin 'scrooloose/syntastic'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
@@ -54,15 +57,22 @@ nnoremap <leader><space> :noh<CR>
 nnoremap S :%s/\<<C-r><C-w>\>/
 
 " Next Tab
-nnoremap <C-w> gt
-nnoremap <C-q> gT
+nnoremap <space><space> gt
+
+" Autoformat
+nnoremap <C-A-l> :Autoformat<CR>
 
 " NAVIGATION----------
-nnoremap <PageDown> 1<C-e>
-nnoremap <PageUp>   1<C-y>
+nnoremap <PageDown> 20<C-e>
+nnoremap <PageUp>   20<C-y>
 
 nnoremap <C-j> mz:m+<cr>`z
 nnoremap <C-k> mz:m-2<cr>`z
+
+nnoremap <C-w>> 10<C-w>>
+nnoremap <C-w>< 10<C-w><
+
+nnoremap <C-n> :NERDTree<CR>10<C-w>>
 
 " TOGGLE PASTE MODE
 set pastetoggle=<F2>
@@ -70,12 +80,14 @@ set pastetoggle=<F2>
 "--------------------
 " Insert Mode
 "--------------------
+inoremap :w<CR> <Esc>:w<CR>a
 
 "--------------------
 " Autocommands
 "--------------------
 " Remove trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
+
 
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
