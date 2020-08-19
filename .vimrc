@@ -146,7 +146,10 @@ vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 nnoremap <C-n> :tabnew<CR>:Explore<CR>
 
-autocmd BufWritePre * :call CleanExtraSpaces()
+autocmd BufWritePre * :call CleanExtraSpaces()o
+
+" Remove Duplicates
+nnoremap rd :%s/^\(.*\)\(\n\1\)\+$/\1/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spell Check
@@ -206,4 +209,3 @@ endfunction
 function! CmdLine(str)
     call feedkeys(":" . a:str)
 endfunction
-
