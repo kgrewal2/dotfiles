@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Vim Options
+" Basics
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set history=500
 
@@ -55,13 +55,14 @@ set showmode
 set showmatch
 set mat=2
 
-set foldcolumn=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Vim Options
+" Fold Options
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=syntax
 set foldnestmax=3
+set foldcolumn=1
+set nofoldenable
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Options
@@ -119,9 +120,8 @@ nnoremap <silent> <leader><space> :noh<cr>
 nnoremap <leader>/ :tabnew<CR>:FZF<CR>
 
 " Switch between the tabs
-let g:lasttab = 1
-nmap <space><space> :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <space><left> gT
+nnoremap <space><right> gt
 
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -146,10 +146,15 @@ vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 nnoremap <C-n> :tabnew<CR>:Explore<CR>
 
-autocmd BufWritePre * :call CleanExtraSpaces()o
+autocmd BufWritePre * :call CleanExtraSpaces()
 
 " Remove Duplicates
 nnoremap rd :%s/^\(.*\)\(\n\1\)\+$/\1/
+
+" Replace under the cursor
+nnoremap S :%s/\<<C-r><C-w>\>/
+
+vnoremap <C-c> :!xclip -f -sel clip<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spell Check

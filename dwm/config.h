@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include<X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -22,6 +23,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -61,6 +63,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normalbg, "-nf", normalfg, "-sb", selbg, "-sf", selfg, NULL };
 static const char *termcmd[]  = { "terminator", NULL };
 
+// Media Keys
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "0%",  NULL };
+
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -69,6 +76,9 @@ static Key keys[] = {
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+    { 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
     { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = -1 } },
     { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
