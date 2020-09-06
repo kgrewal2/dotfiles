@@ -1,21 +1,54 @@
-SEP="  |  "
-
-printBattery(){
-    capacity=$(cat /sys/class/power_supply/BAT0/capacity)
-    if [[ $capacity -le 10 ]]; then
-        dunstify --urgency=critical "Low Battery"
-    fi
-    if [[ $capacity -eq 90 ]]; then
-        dunstify --urgency=critical "Battery Full"
-    fi
-    echo "$capacity%"
-}
-
-printDate(){
-    printf "$(date "+%A, %h %d $SEP %I:%M %p")"
-}
-
-while :; do
-    xsetroot -name "$(printBattery) $SEP $(printDate)";
-    sleep 1m
-done
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+    <match target="font">
+        <edit mode="assign" name="antialias">
+            <bool>true</bool>
+        </edit>
+        <edit mode="assign" name="embeddedbitmap">
+            <bool>false</bool>
+        </edit>
+        <edit mode="assign" name="hinting">
+            <bool>true</bool>
+        </edit>
+        <edit mode="assign" name="hintstyle">
+            <const>hintslight</const>
+        </edit>
+        <edit mode="assign" name="lcdfilter">
+            <const>lcddefault</const>
+        </edit>
+        <edit mode="assign" name="rgba">
+            <const>rgb</const>
+        </edit>
+    </match>
+    <alias>
+        <family>serif</family>
+        <prefer>
+            <family>Noto Serif</family>
+            <family>Cantarell</family>
+            <family>Inter</family>
+            <family>Roboto</family>
+            <family>Joy Pixels</family>
+            <family>Noto Color Emoji</family>
+        </prefer>
+    </alias>
+    <alias>
+        <family>sans-serif</family>
+        <prefer>
+            <family>Noto Sans</family>
+            <family>Inter</family>
+            <family>Roboto</family>
+            <family>Open Sans</family>
+            <family>Joy Pixels</family>
+            <family>Noto Color Emoji</family>
+        </prefer>
+    </alias>
+    <alias>
+        <family>monospace</family>
+            <family>Iosevka</family>
+            <family>Joy Pixels</family>
+            <family>Noto Color Emoji</family>
+        <prefer>
+        </prefer>
+    </alias>
+</fontconfig>

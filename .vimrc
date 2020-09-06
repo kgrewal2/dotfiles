@@ -123,6 +123,9 @@ nnoremap <leader>/ :tabnew<CR>:FZF<CR>
 nnoremap <space><left> gT
 nnoremap <space><right> gt
 
+nnoremap <PageUp> 5<C-y>
+nnoremap <PageDown> 5<C-e>
+
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 

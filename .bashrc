@@ -8,6 +8,8 @@ export PS1="\[\033[33;1m\]\w\[\033[m\]\$ "
 export EDITOR=vim
 motivate
 
+shopt -s autocd
+
 export HISTCONTROL=ignoreboth:erasedups
 
 
@@ -17,7 +19,7 @@ export HISTCONTROL=ignoreboth:erasedups
 alias ..='cd ..'
 alias lock='slock'
 alias ls='ls -hN --color=auto --group-directories-first'
-alias sc='maim -s ./Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
+alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
 alias grep='grep --color=auto'
 alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
@@ -35,6 +37,14 @@ alias ytaudio='youtube-dl -v -ic -o "~/Music/%(uploader)s/%(playlist)s/%(playlis
 alias colorp='xcalib -d :0 -b 1 /usr/share/color/icc/colord/hp_probook\ 5330m_user.icm'
 alias shut='cat /sys/class/power_supply/BAT0/status && shutdown'
 alias sus='cat /sys/class/power_supply/BAT0/status && systemctl suspend'
+alias cdots='cd ~/GitSources/dotfiles'
+alias vimvimrc='vim ~/GitSources/dotfiles/.vimrc'
+alias vimplugins='vim ~/GitSources/dotfiles/.vim/plugins.vim'
+alias vimcpp='vim -p *.cpp*'
+
+alias cdsd='cd ~/Documents/Classes/Software\ Design/'
+alias cddm='cd ~/Documents/Classes/Data\ Mining/'
+alias cdth='cd ~/Documents/Classes/Thesis'
 
 #--------------------
 # Cool Console Functions
