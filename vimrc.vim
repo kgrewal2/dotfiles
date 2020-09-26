@@ -4,6 +4,7 @@
 set history=500
 
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " Autoread
 set autoread
@@ -72,10 +73,6 @@ syntax enable
 set mouse=a
 
 set pastetoggle=<F2>
-
-colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_dark="hard"
 
 set encoding=utf8
 set ffs=unix,dos,mac
@@ -162,14 +159,8 @@ vnoremap <C-c> :!xclip -f -sel clip<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Spell Check
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+set spellfile=~/.vim/spell/en.utf-8.add
+set spell spelllang=en_us
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Abbreviations

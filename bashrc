@@ -8,39 +8,39 @@ export PS1="\[\033[33;1m\]\w\[\033[m\]\$ "
 export EDITOR=vim
 motivate
 
-shopt -s autocd
-
 export HISTCONTROL=ignoreboth:erasedups
-
 
 #--------------------
 # Aliases
 #--------------------
 alias ..='cd ..'
-alias lock='slock'
-alias ls='ls -hN --color=auto --group-directories-first'
-alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
+alias bashrc='vim ~/Git/dotfiles/bashrc'
+alias bat='echo capacity=$(cat /sys/class/power_supply/BAT0/capacity)'
+alias cd-='cd -'
+alias cdots='cd ~/GitSources/dotfiles'
+alias colorp='xcalib -d :0 -b 1 /usr/share/color/icc/colord/hp_probook\ 5330m_user.icm'
+alias dbps='sudo -iu postgres'
 alias grep='grep --color=auto'
 alias install='sudo pacman -S'
-alias remove='sudo pacman -Rns'
-alias dbps='sudo -iu postgres'
-alias update='sudo pacman -Sy'
-alias upgrade='sudo pacman -Syu'
 alias list-installed='comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)'
-alias offscreen='xrandr --output eDP-1 --off'
+alias lock='slock'
 alias lowscreen='xrandr --output eDP-1 --gamma 0.7:0.7:0.7 --brightness 0.6'
-alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
-alias vimm='vim $(fzf)'
-alias yt='youtube-dl -i'
-alias cd-='cd -'
-alias ytaudio='youtube-dl -v -ic -o "~/Music/%(uploader)s/%(playlist)s/%(playlist_index)s- %(title)s.%(ext)s" --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0'
-alias colorp='xcalib -d :0 -b 1 /usr/share/color/icc/colord/hp_probook\ 5330m_user.icm'
+alias ls='ls -hN --color=auto --group-directories-first'
+alias offscreen='xrandr --output eDP-1 --off'
+alias remove='sudo pacman -Rns'
+alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
 alias shut='cat /sys/class/power_supply/BAT0/status && shutdown'
 alias sus='cat /sys/class/power_supply/BAT0/status && systemctl suspend'
-alias cdots='cd ~/GitSources/dotfiles'
-alias vimvimrc='vim ~/GitSources/dotfiles/.vimrc'
-alias vimplugins='vim ~/GitSources/dotfiles/.vim/plugins.vim'
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+alias update='sudo pacman -Sy'
+alias upgrade='sudo pacman -Syu'
 alias vimcpp='vim -p *.cpp*'
+alias vimm='vim $(fzf)'
+alias vimplugins='vim ~/Git/dotfiles/vim_plugins.vim'
+alias vimrc='vim ~/Git/dotfiles/vimrc.vim'
+alias yt='youtube-dl -i'
+alias ytaudio='youtube-dl -v -ic -o "~/Music/%(title)s.%(ext)s" --extract-audio --audio-format m4a --audio-quality 0'
+alias jobsearch='cd ~/Git/LinkedIn-Easy-Apply-Bot/; python easyapplybot.py'
 
 alias cdsd='cd ~/Documents/Classes/Software\ Design/'
 alias cddm='cd ~/Documents/Classes/Data\ Mining/'
@@ -86,6 +86,10 @@ function cc-execute() { find . -type f -iname '*'"${1:-}"'*' \
 #--------------------
 # Functions
 #--------------------
+function csv {
+    perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@" | column -t -s, | less  -F -S -X -K
+}
+
 function mkcd()
 {
     mkdir "$1" &&
