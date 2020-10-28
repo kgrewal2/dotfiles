@@ -9,6 +9,7 @@ export EDITOR=vim
 motivate
 
 export HISTCONTROL=ignoreboth:erasedups
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 
 #--------------------
 # Aliases
@@ -34,17 +35,19 @@ alias sus='cat /sys/class/power_supply/BAT0/status && systemctl suspend'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
-alias vimcpp='vim -p *.cpp*'
+alias vimcpp='vim -p *.cc'
 alias vimm='vim $(fzf)'
 alias vimplugins='vim ~/Git/dotfiles/vim_plugins.vim'
 alias vimrc='vim ~/Git/dotfiles/vimrc.vim'
-alias yt='youtube-dl -i'
+alias yt='youtube-dl -i --format mp4'
 alias ytaudio='youtube-dl -v -ic -o "~/Music/%(title)s.%(ext)s" --extract-audio --audio-format m4a --audio-quality 0'
 alias jobsearch='cd ~/Git/LinkedIn-Easy-Apply-Bot/; python easyapplybot.py'
 
 alias cdsd='cd ~/Documents/Classes/Software\ Design/'
 alias cddm='cd ~/Documents/Classes/Data\ Mining/'
 alias cdth='cd ~/Documents/Classes/Thesis'
+
+alias myip='curl ifconfig.me'
 
 #--------------------
 # Cool Console Functions

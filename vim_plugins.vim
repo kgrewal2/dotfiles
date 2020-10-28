@@ -1,7 +1,7 @@
 " PLUGINS
 call plug#begin('~/.vim/plugged')
-" Plug 'Chiel92/vim-autoformat'
-" Plug 'ervandew/supertab'
+Plug 'Chiel92/vim-autoformat'
+Plug 'ervandew/supertab'
 " Plug 'mattn/emmet-vim'
 " Plug 'turbio/bracey.vim'
 Plug 'godlygeek/tabular'
@@ -21,7 +21,8 @@ Plug 'honza/vim-snippets'
 call plug#end()
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="``"
+let g:UltiSnipsExpandTrigger = "<nop>"
+inoremap <expr> <CR> pumvisible() ? "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>" : "\<CR>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
