@@ -11,6 +11,9 @@ motivate
 export HISTCONTROL=ignoreboth:erasedups
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 
+# TLMGR - Tex
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
 #--------------------
 # Aliases
 #--------------------
@@ -27,7 +30,7 @@ alias list-installed='comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g bas
 alias lock='slock'
 alias lowscreen='xrandr --output eDP-1 --gamma 0.7:0.7:0.7 --brightness 0.6'
 alias ls='ls -hN --color=auto --group-directories-first'
-alias offscreen='xrandr --output eDP-1 --off'
+alias offscreen='xrandr --output eDP1 --off'
 alias remove='sudo pacman -Rns'
 alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
 alias shut='cat /sys/class/power_supply/BAT0/status && shutdown'
@@ -48,6 +51,10 @@ alias cddm='cd ~/Documents/Classes/Data\ Mining/'
 alias cdth='cd ~/Documents/Classes/Thesis'
 
 alias myip='curl ifconfig.me'
+
+alias ppspace='exec ~/Paperspace/Paperspace.sh'
+
+alias dp2left='xrandr --output DP2 --left-of eDP1'
 
 #--------------------
 # Cool Console Functions
