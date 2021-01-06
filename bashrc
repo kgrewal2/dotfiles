@@ -9,7 +9,7 @@ export EDITOR=vim
 motivate
 
 export HISTCONTROL=ignoreboth:erasedups
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
+export JAVA_HOME=/usr/lib/jvm/default
 
 # TLMGR - Tex
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
