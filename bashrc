@@ -6,13 +6,12 @@
 
 export PS1="\[\033[33;1m\]\w\[\033[m\]\$ "
 export EDITOR=vim
-motivate
 
 export HISTCONTROL=ignoreboth:erasedups
 export JAVA_HOME=/usr/lib/jvm/default
 
-# TLMGR - Tex
-alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+export BROWSER="/usr/bin/firefox"
+
 
 #--------------------
 # Aliases
@@ -20,41 +19,35 @@ alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias ..='cd ..'
 alias bashrc='vim ~/Git/dotfiles/bashrc'
 alias bat='echo capacity=$(cat /sys/class/power_supply/BAT0/capacity)'
-alias cd-='cd -'
-alias cdots='cd ~/GitSources/dotfiles'
-alias colorp='xcalib -d :0 -b 1 /usr/share/color/icc/colord/hp_probook\ 5330m_user.icm'
+alias change_brightness='sudo vim /sys/class/backlight/intel_backlight/brightness'
+alias copy='rsync -ah --info=progress2'
 alias dbps='sudo -iu postgres'
+alias dp2left='xrandr --output DP2 --left-of eDP1'
 alias grep='grep --color=auto'
-alias install='sudo pacman -S'
 alias list-installed='comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)'
-alias lock='slock'
-alias lowscreen='xrandr --output eDP-1 --gamma 0.7:0.7:0.7 --brightness 0.6'
-alias ls='ls -hN --color=auto --group-directories-first'
-alias offscreen='xrandr --output eDP1 --off'
-alias remove='sudo pacman -Rns'
+alias ls='ls --human-readable --size -1 -N --color=auto --group-directories-first'
+alias myip='curl ifconfig.me'
 alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
 alias shut='cat /sys/class/power_supply/BAT0/status && shutdown'
 alias sus='cat /sys/class/power_supply/BAT0/status && systemctl suspend'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
-alias update='sudo pacman -Sy'
-alias upgrade='sudo pacman -Syu'
+alias trash='mv -t ~/.trash/'
+
+# vim
 alias vimcpp='vim -p *.cc'
 alias vimm='vim $(fzf)'
 alias vimplugins='vim ~/Git/dotfiles/vim_plugins.vim'
 alias vimrc='vim ~/Git/dotfiles/vimrc.vim'
+
+# youtube-dl
 alias yt='youtube-dl -i --format mp4'
-alias ytaudio='youtube-dl -v -ic -o "~/Music/%(title)s.%(ext)s" --extract-audio --audio-format m4a --audio-quality 0'
-alias jobsearch='cd ~/Git/LinkedIn-Easy-Apply-Bot/; python easyapplybot.py'
+alias yta='youtube-dl -v -ic -o "~/Music/%(title)s.%(ext)s" --extract-audio --audio-format m4a --audio-quality 0'
 
-alias cdsd='cd ~/Documents/Classes/Software\ Design/'
-alias cddm='cd ~/Documents/Classes/Data\ Mining/'
-alias cdth='cd ~/Documents/Classes/Thesis'
-
-alias myip='curl ifconfig.me'
-
-alias ppspace='exec ~/Paperspace/Paperspace.sh'
-
-alias dp2left='xrandr --output DP2 --left-of eDP1'
+# pacman aliases
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
+alias update='sudo pacman -Sy'
+alias upgrade='sudo pacman -Syu'
 
 #--------------------
 # Cool Console Functions
