@@ -1,3 +1,0 @@
-urls_location='~/.assistant/data/urls'
-
-alias lladdurl='echo $1 >> $urls_location'

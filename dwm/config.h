@@ -1,20 +1,19 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka:size=14" };
-static const char dmenufont[]       = "Iosevka:size=14";
+static const char *fonts[]          = { "Iosevka Term:size=14" };
+static const char dmenufont[]       = "Iosevka Term:size=14";
 
-static const char normal_bg[]        = "#282828";
-static const char normal_border[]        = "#282828";
-static const char normal_fg[]        = "#dddddd";
-
-static const char sel_bg[]        = "#282828";
-static const char sel_border[]        = "#fabd2f";
-static const char sel_fg[]        = "#e69500";
+static const char normal_bg[]        = "#000000"; // TOP BAR BACKGROUND
+static const char normal_fg[]        = "#bbbbbb"; // TOP BAR FONT
+static const char normal_border[]    = "#000000"; // NORMAL BORDER
+static const char sel_bg[]           = "#222222";
+static const char sel_fg[]           = "#32CD32";
+static const char sel_border[]       = "#32CD32";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -36,15 +35,15 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "T",      tile },    /* first entry is default */
+	{ "X",      NULL },    /* no layout function means floating behavior */
+	{ "F",      monocle },
 };
 
 /* key definitions */
@@ -61,7 +60,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normal_bg, "-nf", normal_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
-static const char *termcmd[]  = { "terminator", NULL };
+static const char *termcmd[]  = { "termite", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,7 +75,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,                       XK_q,      killclient,     {0} },
+	{ MODKEY,	                XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
