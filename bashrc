@@ -26,7 +26,7 @@ alias xrc='vim ~/.xinitrc'
 
 # youtube-dl
 alias yt='youtube-dl -i --format mp4'
-alias yta='youtube-dl -v -ic -o "~/Music/%(title)s.%(ext)s" --x --audio-format m4a --audio-quality 0'
+alias yta='youtube-dl -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0'
 alias ytcheck='youtube-dl -F'
 alias ytselect='youtube-dl -f'
 
@@ -38,6 +38,8 @@ alias psql='sudo -iu postgres'
 alias shut='shutdown'
 alias sus='systemctl suspend'
 alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
+alias btoff='bluetoothctl power off'
+alias music='cd ~/Music; cmus'
 function btconnect()
 { bluetoothctl power on; bluetoothctl devices | grep $1 | awk '{split($0,a," "); print a[2]}' | xargs bluetoothctl connect; }
 

@@ -1,13 +1,14 @@
 " PLUGINS
 call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
 Plug 'godlygeek/tabular'
-Plug 'jiangmiao/auto-pairs'
-Plug 'sjl/badwolf'
-Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'qpkorr/vim-renamer'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/badwolf'
 Plug 'tpope/vim-commentary'
-Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " Lightline

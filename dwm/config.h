@@ -9,11 +9,11 @@ static const char *fonts[]          = { "Iosevka:size=14" };
 static const char dmenufont[]       = "Iosevka:size=14";
 
 static const char normal_bg[]        = "#000000"; // TOP BAR BACKGROUND
-static const char normal_fg[]        = "#bbbbbb"; // TOP BAR FONT
+static const char normal_fg[]        = "#888888"; // TOP BAR FONT
 static const char normal_border[]    = "#000000"; // NORMAL BORDER
-static const char sel_bg[]           = "#222222";
-static const char sel_fg[]           = "#32CD32";
-static const char sel_border[]       = "#32CD32";
+static const char sel_bg[]           = "#000000";
+static const char sel_fg[]           = "#FFFFFF";
+static const char sel_border[]       = "#FFFFFF";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while :; do
     today=$(date '+%A, %B %d, %l:%M %p')
 
@@ -11,6 +13,15 @@ while :; do
     bluetooth=$(bluetoothctl info | grep Name: | sed 's/^.*: //')
 
     wifi=$(nmcli | grep 'connected to' | sed 's/^.*to //')
+
+    if [ $capacity -gt 90 ]
+    then
+        dunstify "Battery Full"
+    elif [ $capacity -lt 20 ]
+    then
+        dunstify "Battery Low"
+    fi
+
 
     xsetroot -name "$wifi  ◉  $bluetooth  ◉  $capacity% ($bat_status)  ◉  $today"
     sleep 60

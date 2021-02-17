@@ -17,3 +17,5 @@ iab gitremove :fire:
 
 " View Abbreviations
 nnoremap <C-i>ab :iab<CR>
+
+iab pav Pavneet Chopra From Mohali
