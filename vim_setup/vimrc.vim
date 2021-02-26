@@ -1,3 +1,13 @@
+" Status Line Functions
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
 """"""""""""""""""""""""""""""""
 " Basics
 """"""""""""""""""""""""""""""""
@@ -46,6 +56,20 @@ set encoding=utf8
 set ffs=unix,dos,mac
 set number
 set relativenumber
+
+set laststatus=2
+set statusline=%f
+set statusline+=%m
+set statusline+=%r
+set statusline+=%=
+set statusline+=%{StatuslineGit()}
+set statusline+=%y
+set statusline+=\ %l
+set statusline+=\,
+set statusline+=%c
+set statusline+=\ %p
+set statusline+=%%
+
 """"""""""""""""""""
 " Fold Options
 """"""""""""""""""""
