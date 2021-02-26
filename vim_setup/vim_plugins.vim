@@ -9,6 +9,7 @@ Plug 'qpkorr/vim-renamer'
 Plug 'scrooloose/syntastic'
 Plug 'sjl/badwolf'
 Plug 'tpope/vim-commentary'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Lightline

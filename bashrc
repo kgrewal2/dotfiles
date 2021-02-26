@@ -5,24 +5,40 @@ export HISTCONTROL=ignoreboth:erasedups
 export JAVA_HOME=/usr/lib/jvm/default
 export BROWSER=/usr/bin/firefox
 alias trash='mv -t ~/.trash/'
+export PATH="/home/itachi/.local/share/gem/ruby/2.7.0/bin:$PATH"
 
 # Browsing
 alias ..='cd ..'
 alias copy='rsync -ah --info=progress2'
 alias ls='ls --human-readable --size -1 -N --color=auto --group-directories-first'
-alias vimm='vim $(fzf)'
 alias 566='cd ~/Documents/Classes/566'
 alias 502='cd ~/Documents/Classes/502'
 function mkcd(){ mkdir "$1" && cd "$1"; }
 
-# File Shortcuts
+# Vim
+alias vimm='vim $(fzf)'
+alias vimtex='vim -p *.tex *.bib'
 alias vimrc='vim ~/Git/dotfiles/vim_setup/vimrc.vim'
 alias vim_abbrev='vim ~/Git/dotfiles/vim_setup/vim_abbrev.vim'
 alias vim_plugins='vim ~/Git/dotfiles/vim_setup/vim_plugins.vim'
+alias vimtab='vim -p'
+
+# Git
+alias gcl='git clone'
+alias gc='git commit -v'
+alias ga='git add'
+alias gst='git status'
+alias gps='git push'
+alias gpl='git push'
+
+# File Shortcuts
 alias bashrc='vim ~/Git/dotfiles/bashrc'
 alias dotfiles='cd ~/Git/dotfiles/'
 alias docs='cd ~/Documents'
 alias xrc='vim ~/.xinitrc'
+alias cdown='cd ~/Downloads'
+
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 # youtube-dl
 alias yt='youtube-dl -i --format mp4'
