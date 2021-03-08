@@ -1,5 +1,5 @@
 " General
-iab idate <C-r>=strtime("%d/%m/%y %H:%M:%S")<cr>
+iab itoday <C-r>=strftime("%c")<cr>
 iab imail karandeep.grewal97@gmail.com
 iab iasu kgrewal2@asu.edu
 iab iname Karandeep Singh Grewal
@@ -8,14 +8,12 @@ iab iaddr 2245 E Tomahawk Dr, Gilbert, AZ (85298)
 iab igit https://github.com/kgrewal2
 
 " Git Abbreviations
-iab gitbug :bug:
-iab gitdocs :memo:
-iab gitfeature :sparkles:
-iab gitgui :lipstick:
-iab gitinit :tada:
-iab gitremove :fire:
+iab gbug :bug:
+iab gdocs :memo:
+iab gadd :sparkles:
+iab ggui :lipstick:
+iab ginit :tada:
+iab gremove :fire:
 
 " View Abbreviations
-nnoremap <C-i>ab :iab<CR>
-
-iab pav Pavneet Chopra From Mohali
+nnoremap <leader>a :iab<CR>
