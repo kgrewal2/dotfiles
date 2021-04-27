@@ -12,6 +12,8 @@ set omnifunc=syntaxcomplete#Complete
 set undodir=~/.vim/undodir
 set undofile
 
+let g:tex_flavor = "latex"
+
 " Ignore Compiled Files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
@@ -112,6 +114,11 @@ augroup END
 " Prolog
 """"""""""""""""""""
 let g:filetype_pl="prolog"
+
+augroup imp_ft
+  au!
+  autocmd BufNewFile,BufRead *.imp  set filetype=imp
+augroup END
 
 autocmd BufNewFile,BufRead *.todo set filetype=todo
 

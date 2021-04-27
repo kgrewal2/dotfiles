@@ -14,6 +14,7 @@ iab gadd :sparkles:
 iab ggui :lipstick:
 iab ginit :tada:
 iab gremove :fire:
+iab gtest :white_check_mark:
 
 " View Abbreviations
 nnoremap <leader>a :iab<CR>

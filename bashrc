@@ -7,6 +7,13 @@ export BROWSER=/usr/bin/firefox
 alias trash='mv -t ~/.trash/'
 export PATH="/home/itachi/.local/share/gem/ruby/2.7.0/bin:$PATH"
 
+# FZF
+alias vimm='vim $(fzf)'
+alias pdff='firefox $(fzf)'
+
+# Opening Files
+alias fire='firefox '
+
 # Browsing
 alias ..='cd ..'
 alias copy='rsync -ah --info=progress2'
@@ -14,14 +21,27 @@ alias ls='ls --human-readable --size -1 -N --color=auto --group-directories-firs
 alias 566='cd ~/Documents/Classes/566'
 alias 502='cd ~/Documents/Classes/502'
 function mkcd(){ mkdir "$1" && cd "$1"; }
+alias grepr='grep -r'
+
+# Git
+alias gitdc='git diff --cached'
+alias gitcm='git checkout main'
+alias gitall='git add .'
+alias gitc='git commit'
+alias gitr='git checkout -f'
+alias gitck='git checkout Karandeep'
+alias gitmmk='git merge main Karandeep'
+alias gitmkm='git merge Karandeep main'
+alias gitpl='git pull'
+alias gitps='git push'
 
 # Vim
-alias vimm='vim $(fzf)'
 alias vimtex='vim -p *.tex *.bib'
 alias vimrc='vim ~/Git/dotfiles/vim_setup/vimrc.vim'
 alias vim_abbrev='vim ~/Git/dotfiles/vim_setup/vim_abbrev.vim'
 alias vim_plugins='vim ~/Git/dotfiles/vim_setup/vim_plugins.vim'
 alias vimtab='vim -p'
+alias vimwikiupdate='cd ~/Git/private-wiki; git add .; git commit -m "$(date)"; git push'
 
 # File Shortcuts
 alias bashrc='vim ~/Git/dotfiles/bashrc'
