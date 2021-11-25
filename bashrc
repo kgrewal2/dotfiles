@@ -29,6 +29,7 @@ alias gc='git commit'
 alias gcf='git checkout -f'
 alias gpl='git pull'
 alias gps='git push'
+alias gd='git diff | vim -'
 
 # Vim
 alias vimtex='vim -p *.tex *.bib'
