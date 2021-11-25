@@ -24,16 +24,11 @@ function mkcd(){ mkdir "$1" && cd "$1"; }
 alias grepr='grep -r'
 
 # Git
-alias gitdc='git diff --cached'
-alias gitcm='git checkout main'
-alias gitall='git add .'
-alias gitc='git commit'
-alias gitr='git checkout -f'
-alias gitck='git checkout Karandeep'
-alias gitmmk='git merge main Karandeep'
-alias gitmkm='git merge Karandeep main'
-alias gitpl='git pull'
-alias gitps='git push'
+alias ga='git add .'
+alias gc='git commit'
+alias gcf='git checkout -f'
+alias gpl='git pull'
+alias gps='git push'
 
 # Vim
 alias vimtex='vim -p *.tex *.bib'

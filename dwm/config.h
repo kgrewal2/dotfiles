@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normal_bg, "-nf", normal_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
-static const char *termcmd[]  = { "termite", NULL };
+static const char *termcmd[]  = { "terminator", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
