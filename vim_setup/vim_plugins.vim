@@ -1,9 +1,9 @@
 " PLUGINS
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf.vim'
 Plug 'qpkorr/vim-renamer'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'vimwiki/vimwiki'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'

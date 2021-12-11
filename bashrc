@@ -6,10 +6,12 @@ export JAVA_HOME=/usr/lib/jvm/default
 export BROWSER=/usr/bin/firefox
 alias trash='mv -t ~/.trash/'
 export PATH="/home/itachi/.local/share/gem/ruby/2.7.0/bin:$PATH"
+alias dispoff='xrandr --output eDP1 --off;xrandr --output DP2 --auto;  '
 
 # FZF
 alias vimm='vim $(fzf)'
 alias pdff='firefox $(fzf)'
+alias trash='mv -r $1 ~/Trash'
 
 # Opening Files
 alias fire='firefox '
@@ -47,10 +49,10 @@ alias docs='cd ~/Documents'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 # youtube-dl
-alias yt='youtube-dl -i --format mp4'
-alias yta='youtube-dl -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0'
-alias ytcheck='youtube-dl -F'
-alias ytselect='youtube-dl -f'
+alias yt='yt-dlp -i --format mp4'
+alias yta='yt-dlp -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0'
+alias ytcheck='yt-dlp -F'
+alias ytselect='yt-dlp -f'
 
 # System Shortcuts
 alias bat='cat /sys/class/power_supply/BAT0/capacity'

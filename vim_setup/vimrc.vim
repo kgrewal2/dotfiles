@@ -25,29 +25,37 @@ endif
 """"""""""""""""""""""""""""""""
 " Vim Interface
 """"""""""""""""""""""""""""""""
-set so=5
-set wildmenu
-set ruler
-set cmdheight=1
-set hid
 set backspace=eol,start,indent
-set whichwrap+=<,>,h,l,[,]
-set ignorecase
-set smartcase
+set cmdheight=1
+set encoding=utf8
+set ffs=unix,dos,mac
+set hid
 set hlsearch
+set ignorecase
 set incsearch
 set lazyredraw
 set magic
-set showmode
-set showmatch
 set mat=2
-syntax enable
 set mouse=a
-set pastetoggle=<F2>
-set encoding=utf8
-set ffs=unix,dos,mac
 set number
+set pastetoggle=<F2>
 set relativenumber
+set ruler
+set showmatch
+set showmode
+set smartcase
+set so=5
+set whichwrap+=<,>,h,l,[,]
+set wildmenu
+syntax enable
+
+set colorcolumn=110
+
+""""""""""""""""""""
+" Prevents potential security hole
+""""""""""""""""""""
+set exrc
+set secure
 
 """"""""""""""""""""
 " Fold Options

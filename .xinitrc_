@@ -1,5 +1,0 @@
-feh --bg-scale ~/Git/dotfiles/wallpaper.jpg
-export _JAVA_AWT_WM_NONREPARENTING=1; export AWT_TOOLKIT=MToolkit &
-exec dunst &
-exec ~/.config/dwmbar.sh &
-exec dwm
