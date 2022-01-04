@@ -50,7 +50,7 @@ alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 # youtube-dl
 alias yt='yt-dlp -i --format mp4'
-alias yta='yt-dlp -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0'
+alias yta='yt-dlp -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0 --embed-thumbnail'
 alias ytcheck='yt-dlp -F'
 alias ytselect='yt-dlp -f'
 
@@ -121,7 +121,23 @@ function cc-lookup()
 }
 function cc-find() { find . -type f -iname '*'"$*"'*' -ls ; }
 function cc-execute() { find . -type f -iname '*'"${1:-}"'*' \
-    -exec ${2:-file} {} \;  ; }
+    -exec ${2:-file} {} \;  ;
+}
 function csv {
     perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@" | column -t -s, | less  -F -S -X -K
 }
+
+function group-by-date {
+    for x in *; do
+        d=$(date -r "$x" +%Y-%m-%d)
+        mkdir -p "$d"
+        mv -- "$x" "$d/"
+    done
+}
+function convert-heic-all {
+    for file in *;
+        do heif-convert "$file" "$file".jpg;
+    done
+}
+
+export PATH="/home/itachi/.local/share/gem/ruby/3.0.0/bin:$PATH"

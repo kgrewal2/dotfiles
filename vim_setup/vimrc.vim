@@ -99,6 +99,7 @@ vnoremap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 nnoremap <C-n> :tabnew<CR>:Explore<CR>
 nnoremap rd :%s/^\(.*\)\(\n\1\)\+$/\1/
+inoremap :w <Esc>:w<CR>a
 
 
 """"""""""""""""""""
