@@ -10,20 +10,13 @@ alias dispoff='xrandr --output eDP1 --off;xrandr --output DP2 --auto;  '
 
 # FZF
 alias vimm='vim $(fzf)'
-alias pdff='firefox $(fzf)'
 alias trash='mv -r $1 ~/Trash'
-
-# Opening Files
-alias fire='firefox '
 
 # Browsing
 alias ..='cd ..'
 alias copy='rsync -ah --info=progress2'
 alias ls='ls --human-readable --size -1 -N --color=auto --group-directories-first'
-alias 566='cd ~/Documents/Classes/566'
-alias 502='cd ~/Documents/Classes/502'
 function mkcd(){ mkdir "$1" && cd "$1"; }
-alias grepr='grep -r'
 
 # Git
 alias ga='git add .'
@@ -32,6 +25,7 @@ alias gcf='git checkout -f'
 alias gpl='git pull'
 alias gps='git push'
 alias gd='git diff | vim -'
+alias dotfilesupdate='cd ~/Git/dotfiles; git add .; git commit -m "$(date)"; git push'
 
 # Vim
 alias vimtex='vim -p *.tex *.bib'

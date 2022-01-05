@@ -1,2 +1,1 @@
-nnoremap <F10> :VimwikiAll2HTML<CR>
-
+autocmd BufWritePre * :VimwikiAll2HTML
