@@ -4,7 +4,7 @@ iab imail karandeep.grewal97@gmail.com
 iab iasu kgrewal2@asu.edu
 iab iname Karandeep Singh Grewal
 iab iphone +1 (480) 544-9944
-iab iaddr 2245 E Tomahawk Dr, Gilbert, AZ (85298)
+iab iaddr 1500 E Broadway Road, Apt 1086E, Tempe AZ - 85282
 iab igit https://github.com/kgrewal2
 
 " Git Abbreviations

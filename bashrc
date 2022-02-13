@@ -4,13 +4,12 @@ export EDITOR=vim
 export HISTCONTROL=ignoreboth:erasedups
 export JAVA_HOME=/usr/lib/jvm/default
 export BROWSER=/usr/bin/firefox
-alias trash='mv -t ~/.trash/'
-export PATH="/home/itachi/.local/share/gem/ruby/2.7.0/bin:$PATH"
+export PATH="/home/itachi/.local/share/gem/ruby/3.0.0/bin:$PATH"
 alias dispoff='xrandr --output eDP1 --off;xrandr --output DP2 --auto;  '
 
 # FZF
 alias vimm='vim $(fzf)'
-alias trash='mv -r $1 ~/Trash'
+alias rm='trash'
 
 # Browsing
 alias ..='cd ..'
@@ -22,9 +21,10 @@ function mkcd(){ mkdir "$1" && cd "$1"; }
 alias ga='git add .'
 alias gc='git commit'
 alias gcf='git checkout -f'
+alias gd='git diff | vim -'
 alias gpl='git pull'
 alias gps='git push'
-alias gd='git diff | vim -'
+alias gs='git status'
 alias dotfilesupdate='cd ~/Git/dotfiles; git add .; git commit -m "$(date)"; git push'
 
 # Vim
@@ -39,12 +39,13 @@ alias vimwikiupdate='cd ~/Git/private-wiki; git add .; git commit -m "$(date)"; 
 alias bashrc='vim ~/Git/dotfiles/bashrc'
 alias dotfiles='cd ~/Git/dotfiles/'
 alias docs='cd ~/Documents'
+alias down='cd ~/Downloads'
 
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 # youtube-dl
 alias yt='yt-dlp -i --format mp4'
-alias yta='yt-dlp -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0 --embed-thumbnail'
+alias yta='yt-dlp -v -ic -o "%(title)s.%(ext)s" -x --audio-format m4a --audio-quality 0 --embed-metadata'
 alias ytcheck='yt-dlp -F'
 alias ytselect='yt-dlp -f'
 
@@ -56,8 +57,10 @@ alias psql='sudo -iu postgres'
 alias shut='shutdown'
 alias sus='systemctl suspend'
 alias sc='maim -s ~/Pictures/Screenshots/$(date "+%I%M%S_%d%h").jpg'
-alias btoff='bluetoothctl power off'
 alias music='cd ~/Music; cmus'
+
+alias btoff='bluetoothctl power off'
+alias btls='bluetoothctl devices'
 function btconnect()
 { bluetoothctl power on; bluetoothctl devices | grep $1 | awk '{split($0,a," "); print a[2]}' | xargs bluetoothctl connect; }
 
@@ -134,4 +137,5 @@ function convert-heic-all {
     done
 }
 
-export PATH="/home/itachi/.local/share/gem/ruby/3.0.0/bin:$PATH"
+# McFly
+eval "$(mcfly init bash)"

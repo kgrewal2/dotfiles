@@ -101,7 +101,6 @@ nnoremap <C-n> :tabnew<CR>:Explore<CR>
 nnoremap rd :%s/^\(.*\)\(\n\1\)\+$/\1/
 inoremap :w <Esc>:w<CR>a
 
-
 """"""""""""""""""""
 " Others
 """"""""""""""""""""
